@@ -1,5 +1,4 @@
-package com.example.douyinexperience // 保持你的包名
-
+package com.example.douyinexperience
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val swipeRefresh = findViewById<SwipeRefreshLayout>(R.id.swipeRefresh)
 
-        // 2. 设置瀑布流布局 (2列)
+        // 2. 设置瀑布流布局 
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         // 防止图片加载时跳动
         layoutManager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE
@@ -58,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // 造假数据的方法
+    
     private fun generateMockData(isRefresh: Boolean) {
         if (isRefresh) {
             dataList.clear()
@@ -66,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
         // 每次造 10 条数据
         for (i in 0..9) {
-            // 随机高度 (400到800之间)，这是瀑布流好看的关键
+            // 随机高度 (400到800)
             val randomHeight = (400..800).random()
             
             // 使用 Picsum 提供的随机图片服务
@@ -84,7 +83,7 @@ class MainActivity : AppCompatActivity() {
             dataList.add(item)
         }
         
-        // 告诉适配器数据变了，赶紧刷新界面
+        // 适配器数据变了，刷新界面
         adapter.notifyDataSetChanged()
     }
 }
