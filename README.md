@@ -41,4 +41,4 @@
 - 在 `StaggeredGridLayoutManager` 配置中，设置 `gapStrategy = GAP_HANDLING_NONE`，减少不必要的布局重绘计算，提升滑动帧率。
 
 ## 运行截图
-(此处可以在 GitHub 网页直接拖拽上传你的 App 截图)
+![6a2e7a44d31e53b2fe27acc201deccb5](https://github.com/user-attachments/assets/6f107804-eb80-4b3b-a747-a6fe4ed29647)
