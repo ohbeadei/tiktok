@@ -44,4 +44,4 @@
     - 从而实现了从“用户手势”到“数据更新”再到“界面反馈”的完整业务闭环。
 
 ## 运行截图
-![a917be1b77f5104b3e606448fe1cc9a1](https://github.com/user-attachments/assets/7a9c2c4e-02e0-4088-8eeb-34f1ba1f5702)
+<img width="531" height="1144" alt="image" src="https://github.com/user-attachments/assets/c400401e-5785-4b2e-ab86-c28142a46bf2" />
