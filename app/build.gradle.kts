@@ -47,7 +47,6 @@ dependencies {
 
     // 图片加载库 Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
-    // 如果是 kts 写法，用 kapt 或者 annotationProcessor，这里为了简化，我们只用 implementation 也能跑基础功能
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
