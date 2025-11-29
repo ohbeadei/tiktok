@@ -1,4 +1,4 @@
-package com.example.douyinexperience // 保持你自己的包名
+package com.example.douyinexperience 
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -32,21 +32,21 @@ class MyAdapter(private val dataList: ArrayList<ExperienceItem>) :
         return MyViewHolder(view)
     }
 
-    // 3. 绑定数据（最重要的地方）
+    // 3. 绑定数据
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = dataList[position]
 
-        // --- 核心：设置高度实现瀑布流 ---
+        // 设置高度实现瀑布流
         val params = holder.ivImage.layoutParams
         params.height = item.height // 设置成我们在数据里随机生成的高度
         holder.ivImage.layoutParams = params
 
-        // --- 加载文字 ---
+        //加载文字
         holder.tvTitle.text = item.title
         holder.tvUser.text = item.userName
         holder.tvLikeCount.text = item.likeCount.toString()
 
-        // --- 加载图片 (用 Glide) ---
+        // 加载图片 
         Glide.with(holder.itemView)
             .load(item.imageUrl)
             .into(holder.ivImage)
@@ -57,16 +57,16 @@ class MyAdapter(private val dataList: ArrayList<ExperienceItem>) :
             .transform(CircleCrop())
             .into(holder.ivAvatar)
 
-        // --- 处理点赞逻辑 ---
+        //  处理点赞逻辑
         if (item.isLiked) {
-            holder.ivLike.setImageResource(R.drawable.ic_heart_filled) // 这里的名字要和你之前创建的一样
+            holder.ivLike.setImageResource(R.drawable.ic_heart_filled) 
             holder.ivLike.setColorFilter(Color.RED)
         } else {
             holder.ivLike.setImageResource(R.drawable.ic_heart_outline)
             holder.ivLike.clearColorFilter()
         }
 
-        // --- 点击点赞 ---
+        //点击点赞
         holder.ivLike.setOnClickListener {
             // 改变状态
             if (item.isLiked) {
